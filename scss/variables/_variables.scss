@@ -1,0 +1,39 @@
+// colors
+$iq-blue: rgb(103, 195, 231);
+$iq-ygreen: rgb(10, 233, 159);
+$iq-text: rgb(100, 100, 100);
+$iq-lighttext: rgb(190, 190, 190);
+
+// border
+$iq-b-rad: 7px;
+
+// buttons
+
+// global button
+.iq-btn {
+  padding: 1px 4px;
+  background-color: darkcyan;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  outline: none !important;
+  transition: all 0.2s;
+  &:focus {
+    outline: none !important;
+    border-radius: 10px;
+  }
+  &:hover {
+    background-color: rgb(70, 167, 167);
+  }
+  &:active {
+    background-color: darkcyan;
+    outline: none !important;
+    outline-offset: 0;
+    border: none;
+  }
+  * {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,685 @@
+.iq-btn {
+  padding: 1px 4px;
+  background-color: darkcyan;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  outline: none !important;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.iq-btn:focus {
+  outline: none !important;
+  border-radius: 10px;
+}
+
+.iq-btn:hover {
+  background-color: #46a7a7;
+}
+
+.iq-btn:active {
+  background-color: darkcyan;
+  outline: none !important;
+  outline-offset: 0;
+  border: none;
+}
+
+.iq-btn * {
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+/* EXTRA SMALL */
+@media (max-width: 576px) {
+  aside.admin-nav {
+    position: fixed;
+    left: -300px !important;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #e6e6e6;
+    overflow: auto;
+  }
+  aside.admin-nav nav > div:first-child a > img {
+    width: calc(100% - 30%);
+    height: 50px;
+  }
+  aside.admin-nav nav > ul {
+    width: 100%;
+    margin-top: 55px;
+  }
+  aside.admin-nav nav > ul li a {
+    width: 100%;
+    color: #646464;
+    border-radius: 7px;
+    padding: 3px auto;
+    font-size: 14px;
+    -webkit-transition: margin-left 0.2s;
+    transition: margin-left 0.2s;
+  }
+  aside.admin-nav nav > ul li a:hover {
+    border-radius: 0;
+    margin-left: 3px;
+  }
+  aside.admin-nav nav > ul li a .sb-icn {
+    font-size: 17px;
+  }
+  aside.admin-nav nav > ul li a.active {
+    background-color: #67c3e7;
+    -webkit-box-shadow: 0 2px 3px #e6e6e6;
+            box-shadow: 0 2px 3px #e6e6e6;
+  }
+  main.main-view {
+    position: relative !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child h5 {
+    font-size: 21px !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) {
+    padding: 0 5%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div {
+    width: 20% !important;
+    height: 20% !important;
+    margin: 3% auto !important;
+    border-radius: 100%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div img {
+    border-radius: 100%;
+    width: 100%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(3) {
+    padding: 1% 10% !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(3) {
+    margin-top: 7% !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(3) > div table {
+    width: 550px !important;
+  }
+  main.main-view > .row > div:last-child {
+    padding-bottom: 3% !important;
+  }
+  main.main-view > .row > div:last-child > section:nth-child(2) .canvasjs-chart-container {
+    height: 200px !important;
+  }
+  main.main-view > .row > div:last-child > section:last-child > div table {
+    width: 550px !important;
+  }
+}
+
+/* SMALL */
+@media (min-width: 576px) and (max-width: 768px) {
+  aside.admin-nav {
+    position: fixed;
+    left: -1000px !important;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid #e6e6e6;
+    overflow: auto;
+  }
+  aside.admin-nav nav > div:first-child a > img {
+    width: calc(100% - 30%);
+    height: 50px;
+  }
+  aside.admin-nav nav > ul {
+    width: 100%;
+    margin-top: 55px;
+  }
+  aside.admin-nav nav > ul li a {
+    width: 100%;
+    color: #646464;
+    border-radius: 7px;
+    padding: 3px auto;
+    font-size: 13px;
+    -webkit-transition: margin-left 0.2s;
+    transition: margin-left 0.2s;
+  }
+  aside.admin-nav nav > ul li a:hover {
+    border-radius: 0;
+    margin-left: 3px;
+  }
+  aside.admin-nav nav > ul li a .sb-icn {
+    font-size: 17px;
+  }
+  aside.admin-nav nav > ul li a.active {
+    background-color: #67c3e7;
+    -webkit-box-shadow: 0 2px 3px #e6e6e6;
+            box-shadow: 0 2px 3px #e6e6e6;
+  }
+  main.main-view {
+    position: relative !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child {
+    width: 70%;
+    margin: 8% auto auto !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child h5 {
+    font-size: 21px !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) {
+    padding: 1% 5%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div {
+    width: 20% !important;
+    height: 20% !important;
+    margin: 4% auto !important;
+    border-radius: 100%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div img {
+    border-radius: 100%;
+    width: 100%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(3) {
+    padding: 1% 10% !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(3) {
+    margin-top: 7% !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(3) > div table {
+    width: 100% !important;
+  }
+  main.main-view > .row > div:last-child {
+    padding-bottom: 3% !important;
+  }
+  main.main-view > .row > div:last-child > section:nth-child(2) .canvasjs-chart-container {
+    height: 200px !important;
+  }
+  main.main-view > .row > div:last-child > section:last-child > div table {
+    width: 100% !important;
+  }
+}
+
+/* MEDIUM */
+@media (min-width: 768px) and (max-width: 992px) {
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child {
+    margin-right: 0 !important;
+    margin-bottom: 10px !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child {
+    width: 70%;
+    margin: 8% auto auto !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child h5 {
+    font-size: 21px !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) {
+    padding: 1% 5%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div {
+    width: 20% !important;
+    height: 20% !important;
+    margin: 4% auto !important;
+    border-radius: 100%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div img {
+    border-radius: 100%;
+    width: 100%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(3) {
+    padding: 1% 10% !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(3) {
+    margin-top: 7% !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(3) > div table {
+    width: 100% !important;
+  }
+  main.main-view > .row > div:last-child {
+    padding-bottom: 3% !important;
+  }
+  main.main-view > .row > div:last-child > section:nth-child(2) .canvasjs-chart-container {
+    height: 200px !important;
+  }
+  main.main-view > .row > div:last-child > section:last-child > div table {
+    width: 100% !important;
+  }
+}
+
+/* LARGE */
+@media (min-width: 992px) and (max-width: 1200px) {
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child h5 {
+    font-size: 21px !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) {
+    padding: 1% 5%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div {
+    width: 20% !important;
+    height: 20% !important;
+    margin: 4% auto !important;
+    border-radius: 100%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div img {
+    border-radius: 100%;
+    width: 100%;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(3) {
+    padding: 1% 10% !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(3) {
+    margin-top: 7% !important;
+  }
+  main.main-view > .row > div:first-child > section:nth-child(3) > div table {
+    width: 100% !important;
+  }
+  main.main-view > .row > div:last-child {
+    padding-bottom: 3% !important;
+  }
+  main.main-view > .row > div:last-child > section:nth-child(2) .canvasjs-chart-container {
+    height: 200px !important;
+  }
+  main.main-view > .row > div:last-child > section:last-child > div table {
+    width: 100% !important;
+  }
+}
+
+/* EXTRA LARGE */
+.page-wrap {
+  position: relative;
+  color: #646464;
+}
+
+.page-wrap ::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.page-wrap ::-webkit-scrollbar-track {
+  background: #a9d5ee;
+}
+
+.page-wrap ::-webkit-scrollbar-thumb {
+  background: #67c3e7;
+  border-radius: 20px;
+}
+
+.page-wrap ::-webkit-scrollbar-thumb:hover {
+  background: #67c3e7;
+}
+
+.page-wrap .dashboard-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  margin-bottom: 5%;
+  padding: 3px 2%;
+  z-index: 5;
+}
+
+.page-wrap .dashboard-nav > div {
+  font-size: 25px;
+  color: #67c3e7;
+  cursor: pointer;
+}
+
+.page-wrap .dashboard-nav > div img {
+  width: 60px;
+  height: 50px;
+}
+
+.page-wrap .dashboard-nav .sidebar-active {
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.page-wrap aside.admin-nav {
+  position: fixed;
+  left: 0;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e6e6e6;
+  overflow: auto;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  z-index: 3;
+}
+
+.page-wrap aside.admin-nav nav > div:first-child a > img {
+  width: calc(100% - 30%);
+  height: 50px;
+}
+
+.page-wrap aside.admin-nav nav > ul {
+  width: 100%;
+  margin-top: 55px;
+}
+
+.page-wrap aside.admin-nav nav > ul li a {
+  width: 100%;
+  color: #646464;
+  border-radius: 7px;
+  padding: 3px auto;
+  font-size: 14px;
+  -webkit-transition: margin-left 0.2s;
+  transition: margin-left 0.2s;
+}
+
+.page-wrap aside.admin-nav nav > ul li a:hover {
+  border-radius: 0;
+  margin-left: 3px;
+}
+
+.page-wrap aside.admin-nav nav > ul li a .sb-icn {
+  font-size: 17px;
+}
+
+.page-wrap aside.admin-nav nav > ul li a.active {
+  background-color: #67c3e7;
+  -webkit-box-shadow: 0 2px 3px #e6e6e6;
+          box-shadow: 0 2px 3px #e6e6e6;
+}
+
+.page-wrap aside.admin-nav-open {
+  left: 0 !important;
+}
+
+.page-wrap main.main-view {
+  position: absolute;
+  right: 0;
+}
+
+.page-wrap main.main-view > .row {
+  padding-top: 1.5%;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) {
+  margin-top: 20px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div {
+  height: 250px;
+  padding: 5px 0;
+  border-radius: 7px;
+  -webkit-box-shadow: -1px 1px 3px #ececec, 1px 3px 3px #e6e6e6;
+          box-shadow: -1px 1px 3px #ececec, 1px 3px 3px #e6e6e6;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child {
+  margin-right: 20px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child svg.highcharts-root {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child .highcharts-title {
+  width: 100%;
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child .highcharts-title b {
+  font-size: 12px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child .highcharts-title b:last-child {
+  color: #0ae99f;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:first-child .highcharts-credits {
+  display: none !important;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child {
+  padding: 10px 3%;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child small {
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child h5 {
+  color: #67c3e7;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child span:last-child {
+  color: #bebebe;
+  font-weight: lighter;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child span:last-child small {
+  text-transform: capitalize;
+  margin-top: 3px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child span:last-child small * {
+  color: #0ae99f;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:first-child span:last-child small:last-child {
+  border: 1px solid #0ae99f;
+  border-radius: 20px;
+  padding: 1px 8px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div {
+  width: 50%;
+  height: 50%;
+  margin: 7% auto;
+  border-radius: 100%;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(2) div img {
+  border-radius: 100%;
+  width: 100%;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(3) > div {
+  width: 45%;
+  font-size: 13px;
+  line-height: 12px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(3) > div > .progress {
+  height: 7px;
+  margin-top: 2.5px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(3) > div > .progress .expn-progress-bar:first-child {
+  background-color: #67c3e7;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(2) .row > div:last-child section:nth-child(3) > div > .progress .transac-progress-bar:first-child {
+  background-color: #0ae99f;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) {
+  margin-top: 5%;
+  padding: 2% 0.5%;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table {
+  width: 100%;
+  font-size: 13px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tr {
+  text-align: start;
+  border-bottom: 1px solid #cfcfcf;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tr th, .page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tr td {
+  padding: 15px 8px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tr th:first-child .form-check, .page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tr td:first-child .form-check {
+  margin: auto;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tr th:nth-child(2), .page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tr td:nth-child(2) {
+  width: auto;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table thead tr:first-child {
+  border-bottom: none;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table thead tr:first-child th {
+  padding: 8px 3px 15px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table thead tr:first-child th .iq-btn {
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table thead tr:first-child th:nth-child(2) > .iq-btn {
+  width: 50%;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table thead tr:first-child th:last-child > .iq-btn {
+  background-color: darkorange;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table thead tr:first-child th:last-child > .iq-btn:hover {
+  background-color: orange;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table thead tr:first-child th:last-child > .iq-btn:active {
+  background-color: darkorange;
+  outline: none !important;
+  outline-offset: 0;
+  border: none;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tbody tr:hover {
+  background-color: #67c3e7;
+  color: #ffffff;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tbody tr:hover .fa-circle {
+  display: none;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tbody tr:hover td:last-child a.download-agent {
+  display: block;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tbody td:last-child {
+  font-size: 8px;
+  text-align: center;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tbody td:last-child .actv-user {
+  color: #67c3e7;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tbody td:last-child .inactv-user {
+  color: darkorange;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tbody td:last-child a.download-agent {
+  display: none;
+  color: #ffffff;
+  font-size: 12px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.page-wrap main.main-view > .row > div:first-child > section:nth-child(3) > div table tbody td:last-child a.download-agent:hover {
+  font-size: 13px;
+}
+
+.page-wrap main.main-view > .row > div:last-child {
+  padding-bottom: 2%;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:nth-child(2) .canvasjs-chart-container {
+  height: 250px;
+  margin: 5% 0;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:nth-child(2) .canvasjs-chart-credit {
+  display: none;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 7%;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tr {
+  text-align: start;
+  border-bottom: 1px solid #ececec;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tr th {
+  padding: 20px 5px;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tr td {
+  line-height: 14px;
+  padding: 10px 3px;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table thead tr {
+  background-color: #67c3e7;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tbody span:nth-child(2) {
+  color: #bebebe;
+  font-size: 11px;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tbody td:first-child button {
+  width: 23px;
+  height: 23px;
+  border-radius: 100%;
+  background-color: #67c3e7;
+  font-size: 11px;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tbody td:first-child button:hover {
+  background-color: #38d0f7;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tbody td:first-child button:active {
+  background-color: #67c3e7;
+  outline: none !important;
+  outline-offset: 0;
+  border: none;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tbody td:nth-child(4) {
+  text-transform: capitalize;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tbody td:last-child span:first-child {
+  color: #0ae99f;
+}
+
+.page-wrap main.main-view > .row > div:last-child > section:last-child > div table tbody td:last-child span:last-child {
+  font-size: 9px;
+}
+/*# sourceMappingURL=admin.css.map */

@@ -1,0 +1,448 @@
+@import './variables/variables';
+@import './media-query/query';
+
+.page-wrap {
+  position: relative;
+  color: $iq-text;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(169, 213, 238);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: $iq-blue;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: $iq-blue;
+  }
+
+  // dashboard-nav (small device)
+  .dashboard-nav {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    // border-bottom: 1px solid rgb(243, 243, 243);
+    margin-bottom: 5%;
+    padding: 3px 2%;
+    z-index: 5;
+
+    &>div {
+      font-size: 25px;
+      color: $iq-blue;
+      cursor: pointer;
+
+      img {
+        width: 60px;
+        height: 50px;
+      }
+    }
+    .sidebar-active {
+      transform: rotateZ(90deg);
+      transition: all 0.4s;
+    }
+  }
+
+  // sidebar
+  aside.admin-nav {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid rgb(230, 230, 230);
+    overflow: auto;
+    transition: all 0.4s;
+    z-index: 3;
+
+    nav {
+      &>div:first-child {
+        a>img {
+          width: calc(100% - 30%);
+          height: 50px;
+        }
+      }
+      &>ul {
+        width: 100%;
+        // background-color: red;
+        margin-top: 55px;
+        li {
+          // margin-bottom: 5px;
+
+          a {
+            width: 100%;
+            color: $iq-text;
+            border-radius: $iq-b-rad;
+            padding: 3px auto;
+            font-size: 14px;
+            // font-weight: 500;
+            transition: margin-left 0.2s;
+            &:hover {
+              // background-color: rgb(240, 240, 240);
+              border-radius: 0;
+              margin-left: 3px;
+            }
+
+            .sb-icn {
+              font-size: 17px;
+            }
+          }
+          a.active {
+            background-color: $iq-blue;
+            box-shadow: 0 2px 3px rgb(230, 230, 230);
+          }
+        }
+      }
+    }
+  }
+
+  // toggled sidedbar
+  aside.admin-nav-open {
+    left: 0 !important;
+  }
+
+  // main content
+  main.main-view {
+    position: absolute;
+    right: 0;
+    // background-color: plum;
+    // padding: 0 2%;
+    // width: 100%;
+    // margin-left: 100rem;
+
+    &>.row {
+      // background-color: honeydew;
+      padding-top: 1.5%;
+      
+      // agents section
+      &>div:first-child {
+
+        // chart section
+        &>section:nth-child(2) {
+          margin-top: 20px;
+
+          .row {
+            // transaction chart container
+            &>div {
+              height: 250px;
+              padding: 5px 0;
+              border-radius: $iq-b-rad;
+              box-shadow: -1px 1px 3px rgb(236, 236, 236), 1px 3px 3px rgb(230, 230, 230);
+
+              // chart 1 (transactions)
+              &:first-child {
+                margin-right: 20px;
+
+                svg.highcharts-root {
+                  background-color: red;
+                  width: 100%;
+                  height: 100%;
+                }
+
+                .highcharts-title {
+                  width: 100%;
+                  display: inline-flex !important;
+                  justify-content: space-between;
+                  b {
+                    font-size: 12px;
+                    &:last-child {
+                      color: $iq-ygreen;
+                    }
+                  }
+                }
+                .highcharts-credits {
+                  display: none !important;
+                }
+              }
+
+              // chart 2 (balance)
+              &:last-child {
+                padding: 10px 3%;
+
+                section:first-child {
+                  small {
+                    font-size: 11px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                  }
+                  h5 {
+                    color: $iq-blue;
+                    font-size: 24px;
+                    font-weight: bolder;
+                  }
+                  span:last-child {
+                    color: $iq-lighttext;
+                    font-weight: lighter;
+                    small {
+                      text-transform: capitalize;
+                      margin-top: 3px;
+
+                      * {
+                        color: $iq-ygreen;
+                      }
+
+                      &:last-child {
+                        // background-color: indianred;
+                        border: 1px solid $iq-ygreen;
+                        border-radius: 20px;
+                        padding: 1px 8px;
+                      }
+                    }
+                  }
+                }
+
+                // animated piechart
+                section:nth-child(2) {
+                  div {
+                    width: 50%;
+                    height: 50%;
+                    margin: 7% auto;
+                    border-radius: 100%;
+
+                    img {
+                      border-radius: 100%;
+                      width: 100%;
+                    }
+                  }
+                }
+
+                // expenses & transction barchart
+                section:nth-child(3) {
+                  &>div {
+                    width: 45%;
+                    font-size: 13px;
+                    line-height: 12px;
+
+                    // progress bar
+                    &>.progress {
+                      height: 7px;
+                      margin-top: 2.5px;
+                      
+                      .expn-progress-bar {
+                        &:first-child {
+                          background-color: $iq-blue;
+                        }
+                      }
+                      .transac-progress-bar {
+                        &:first-child {
+                          background-color: $iq-ygreen;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        // agent table
+        &>section:nth-child(3) {
+          // background-color: indigo;
+          margin-top: 5%;
+          padding: 2% 0.5%;
+          &>div {
+            table {
+              width: 100%;
+              font-size: 13px;
+              
+              // all cells
+              tr {
+                text-align: start;
+                border-bottom: 1px solid rgb(207, 207, 207);
+                transition: all 0.3s;
+
+                th, td {
+                  padding: 15px 8px;
+                }
+
+                th:first-child, td:first-child {
+                  .form-check {
+                    margin: auto;
+                  }
+                }
+                th:nth-child(2), td:nth-child(2) {
+                  width: auto;
+                }
+              }
+              
+              // table header
+              thead {
+                tr:first-child {
+                  border-bottom: none;
+                  th {
+                    padding: 8px 3px 15px;
+
+                    .iq-btn {
+                      border-radius: 5px;
+                      font-size: 12px;
+                    }
+                    &:nth-child(2)>.iq-btn {
+                      width: 50%;
+                    }
+                    &:last-child>.iq-btn {
+                      background-color: darkorange;
+
+                      &:hover {
+                        background-color:orange;
+                      }
+                      &:active {
+                        background-color: darkorange;
+                        outline: none !important;
+                        outline-offset: 0;
+                        border: none;
+                      }
+                    }
+                  }
+                }
+              }
+
+              // table body
+              tbody {
+                // table hover
+                tr:hover {
+                  background-color: $iq-blue;
+                  color: #ffffff;
+
+                  .fa-circle {
+                    display: none;
+                  }
+                  td:last-child a.download-agent {
+                    display: block;
+                  }
+                }
+
+                td:last-child {
+                  // background-color: darkorchid;
+                  font-size: 8px;
+                  text-align: center;
+
+                  .actv-user {
+                    color: $iq-blue;
+                  }
+                  .inactv-user {
+                    color: darkorange;
+                  }
+                  a.download-agent {
+                    display: none;
+                    color: #ffffff;
+                    font-size: 12px;
+                    transition: all 0.4s;
+
+                    &:hover {
+                      font-size: 13px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }      
+      }
+
+      // transaction section
+      &>div:last-child {
+        padding-bottom: 2%;
+
+        // pie chart
+        &>section:nth-child(2) {
+          // background-color: rgb(255, 105, 230);
+
+          // chart container
+          .canvasjs-chart-container {
+            height: 250px;
+            margin: 5% 0;
+          }
+          // piechart foot note
+          .canvasjs-chart-credit {
+            display: none;
+          }
+        }
+
+        // transaction table
+        &>section:last-child {
+          &>div {
+            table {
+              width: 100%;
+              font-size: 12px;
+              margin-top: 7%;
+              
+              // all cells
+              tr {
+                text-align: start;
+                border-bottom: 1px solid rgb(236, 236, 236);
+                transition: all 0.3s;
+
+                // header padding
+                th {
+                  padding: 20px 5px;
+                }
+                // body padding
+                td {
+                  line-height: 14px;
+                  padding: 10px 3px;
+                } 
+              }
+              
+              // table header
+              thead {
+                tr {
+                  background-color: $iq-blue;
+                  font-size: 13px;
+                  color: #ffffff;
+                  // border-bottom: 2px solid $iq-blue;
+                }
+              }
+
+              // table body
+              tbody {
+                span:nth-child(2) {
+                  color: $iq-lighttext;
+                  font-size: 11px;
+                }
+
+                // copy icon
+                td:first-child {
+                  button {
+                    width: 23px;
+                    height: 23px;
+                    border-radius: 100%;
+                    background-color: $iq-blue;
+                    font-size: 11px;
+
+                    &:hover {
+                      background-color:rgb(56, 208, 247);
+                    }
+                    &:active {
+                      background-color: $iq-blue;
+                      outline: none !important;
+                      outline-offset: 0;
+                      border: none;
+                    }
+                  }
+                }
+
+                // bank name
+                td:nth-child(4) {
+                  text-transform: capitalize;
+                }
+
+                // amount
+                td:last-child {
+                  span:first-child {
+                    color: $iq-ygreen;
+                  }
+                  span:last-child {
+                    font-size: 9px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

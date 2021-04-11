@@ -1,0 +1,480 @@
+/* MEDIA QUERIES */
+
+/* EXTRA SMALL */
+@media (max-width: 576px) {
+  // sidebar
+  aside.admin-nav {
+    position: fixed;
+    left: -300px !important;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid rgb(230, 230, 230);
+    overflow: auto;  
+     
+
+    nav {
+      &>div:first-child {
+        a>img {
+          width: calc(100% - 30%);
+          height: 50px;
+        }
+      }
+      &>ul {
+        width: 100%;
+        // background-color: red;
+        margin-top: 55px;
+        li {
+          // margin-bottom: 5px;
+
+          a {
+            width: 100%;
+            color: $iq-text;
+            border-radius: $iq-b-rad;
+            padding: 3px auto;
+            font-size: 14px;
+            // font-weight: 500;
+            transition: margin-left 0.2s;
+            &:hover {
+              // background-color: rgb(240, 240, 240);
+              border-radius: 0;
+              margin-left: 3px;
+            }
+
+            .sb-icn {
+              font-size: 17px;
+            }
+          }
+          a.active {
+            background-color: $iq-blue;
+            box-shadow: 0 2px 3px rgb(230, 230, 230);
+          }
+        }
+      }
+    }
+  }
+
+  // main content
+  main.main-view {
+    position: relative !important;
+
+    &>.row {
+      // agents section
+      &>div:first-child {
+
+        // chart section
+        &>section:nth-child(2) {
+          .row {
+            // transaction chart container
+            &>div {
+              // chart 1 (transactions)
+              &:first-child {
+                margin-right: 0 !important;
+                margin-bottom: 10px !important;
+              }
+
+              // chart 2 (balance)
+              &:last-child {
+                section:first-child {
+                  h5 {
+                    font-size: 21px !important;
+                  }
+                }
+
+                // animated piechart
+                section:nth-child(2) {
+                  padding: 0 5%;
+                  div {
+                    width: 20% !important;
+                    height: 20% !important;
+                    margin: 3% auto !important;
+                    border-radius: 100%;
+
+                    img {
+                      border-radius: 100%;
+                      width: 100%;
+                    }
+                  }
+                }
+
+                // expenses & transction barchart
+                section:nth-child(3) {
+                  padding: 1% 10% !important;
+                }
+              }
+            }
+          }
+        }
+
+        // agent table
+        &>section:nth-child(3) {
+          // background-color: indigo;
+          margin-top: 7% !important;
+          // padding: 2% 0.5%;
+          &>div {
+            table {
+              width: 550px !important;
+            }
+          }
+        }      
+      }
+
+      // transaction section
+      &>div:last-child {
+        padding-bottom: 3% !important;
+
+        // pie chart
+        &>section:nth-child(2) {
+
+          // chart container
+          .canvasjs-chart-container {
+            height: 200px !important;
+          }
+        }
+
+        // transaction table
+        &>section:last-child {
+          &>div {
+            table {
+              width: 550px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* SMALL */
+@media (min-width: 576px) and (max-width: 768px) {
+  // sidebar
+  aside.admin-nav {
+    position: fixed;
+    left: -1000px !important;
+    height: 100vh;
+    background-color: #ffffff;
+    border-right: 1px solid rgb(230, 230, 230);
+    overflow: auto;  
+     
+
+    nav {
+      &>div:first-child {
+        a>img {
+          width: calc(100% - 30%);
+          height: 50px;
+        }
+      }
+      &>ul {
+        width: 100%;
+        // background-color: red;
+        margin-top: 55px;
+        li {
+          // margin-bottom: 5px;
+
+          a {
+            width: 100%;
+            color: $iq-text;
+            border-radius: $iq-b-rad;
+            padding: 3px auto;
+            font-size: 13px;
+            // font-weight: 500;
+            transition: margin-left 0.2s;
+            &:hover {
+              // background-color: rgb(240, 240, 240);
+              border-radius: 0;
+              margin-left: 3px;
+            }
+
+            .sb-icn {
+              font-size: 17px;
+            }
+          }
+          a.active {
+            background-color: $iq-blue;
+            box-shadow: 0 2px 3px rgb(230, 230, 230);
+          }
+        }
+      }
+    }
+  }
+
+  // main content
+  main.main-view {
+    position: relative !important;
+
+    &>.row {
+      // agents section
+      &>div:first-child {
+
+        // chart section
+        &>section:nth-child(2) {
+          .row {
+            // transaction chart container
+            &>div {
+              // chart 1 (transactions)
+              &:first-child {
+                margin-right: 0 !important;
+                margin-bottom: 10px !important;
+              }
+
+              // chart 2 (balance)
+              &:last-child {
+                width: 70%;
+                margin: 8% auto  auto!important;
+
+                section:first-child {
+                  h5 {
+                    font-size: 21px !important;
+                  }
+                }
+
+                // animated piechart
+                section:nth-child(2) {
+                  padding: 1% 5%;
+                  div {
+                    width: 20% !important;
+                    height: 20% !important;
+                    margin: 4% auto !important;
+                    border-radius: 100%;
+
+                    img {
+                      border-radius: 100%;
+                      width: 100%;
+                    }
+                  }
+                }
+
+                // expenses & transction barchart
+                section:nth-child(3) {
+                  padding: 1% 10% !important;
+                }
+              }
+            }
+          }
+        }
+
+        // agent table
+        &>section:nth-child(3) {
+          margin-top: 7% !important;
+
+          &>div {
+            table {
+              width: 100% !important;
+            }
+          }
+        }      
+      }
+
+      // transaction section
+      &>div:last-child {
+        padding-bottom: 3% !important;
+
+        // pie chart
+        &>section:nth-child(2) {
+
+          // chart container
+          .canvasjs-chart-container {
+            height: 200px !important;
+          }
+        }
+
+        // transaction table
+        &>section:last-child {
+          &>div {
+            table {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* MEDIUM */
+@media (min-width: 768px) and (max-width: 992px) {
+  // main content
+  main.main-view {
+    &>.row {
+      // agents section
+      &>div:first-child {
+
+        // chart section
+        &>section:nth-child(2) {
+          .row {
+            // transaction chart container
+            &>div {
+              // chart 1 (transactions)
+              &:first-child {
+                margin-right: 0 !important;
+                margin-bottom: 10px !important;
+              }
+
+              // chart 2 (balance)
+              &:last-child {
+                width: 70%;
+                margin: 8% auto  auto!important;
+
+                section:first-child {
+                  h5 {
+                    font-size: 21px !important;
+                  }
+                }
+
+                // animated piechart
+                section:nth-child(2) {
+                  padding: 1% 5%;
+                  div {
+                    width: 20% !important;
+                    height: 20% !important;
+                    margin: 4% auto !important;
+                    border-radius: 100%;
+
+                    img {
+                      border-radius: 100%;
+                      width: 100%;
+                    }
+                  }
+                }
+
+                // expenses & transction barchart
+                section:nth-child(3) {
+                  padding: 1% 10% !important;
+                }
+              }
+            }
+          }
+        }
+
+        // agent table
+        &>section:nth-child(3) {
+          margin-top: 7% !important;
+
+          &>div {
+            table {
+              width: 100% !important;
+            }
+          }
+        }      
+      }
+
+      // transaction section
+      &>div:last-child {
+        padding-bottom: 3% !important;
+
+        // pie chart
+        &>section:nth-child(2) {
+
+          // chart container
+          .canvasjs-chart-container {
+            height: 200px !important;
+          }
+        }
+
+        // transaction table
+        &>section:last-child {
+          &>div {
+            table {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* LARGE */
+@media (min-width: 992px) and (max-width: 1200px) {
+   // main content
+   main.main-view {
+    &>.row {
+      // agents section
+      &>div:first-child {
+
+        // chart section
+        &>section:nth-child(2) {
+          .row {
+            // transaction chart container
+            &>div {
+              // chart 1 (transactions)
+              &:first-child {
+                // margin-right: 0 !important;
+                // margin-bottom: 10px !important;
+              }
+
+              // chart 2 (balance)
+              &:last-child {
+                // width: 70%;
+                // margin: 8% auto  auto!important;
+
+                section:first-child {
+                  h5 {
+                    font-size: 21px !important;
+                  }
+                }
+
+                // animated piechart
+                section:nth-child(2) {
+                  padding: 1% 5%;
+                  div {
+                    width: 20% !important;
+                    height: 20% !important;
+                    margin: 4% auto !important;
+                    border-radius: 100%;
+
+                    img {
+                      border-radius: 100%;
+                      width: 100%;
+                    }
+                  }
+                }
+
+                // expenses & transction barchart
+                section:nth-child(3) {
+                  padding: 1% 10% !important;
+                }
+              }
+            }
+          }
+        }
+
+        // agent table
+        &>section:nth-child(3) {
+          margin-top: 7% !important;
+
+          &>div {
+            table {
+              width: 100% !important;
+            }
+          }
+        }      
+      }
+
+      // transaction section
+      &>div:last-child {
+        padding-bottom: 3% !important;
+
+        // pie chart
+        &>section:nth-child(2) {
+
+          // chart container
+          .canvasjs-chart-container {
+            height: 200px !important;
+          }
+        }
+
+        // transaction table
+        &>section:last-child {
+          &>div {
+            table {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* EXTRA LARGE */
+@media (min-width: 1200px) {}
